@@ -14,6 +14,29 @@ const theme = createTheme({
       main: red.A400,
     },
   },
+  typography: {
+    fontFamily: [
+      'Roboto',
+      'Helvetica Neue',
+      'Arial',
+      'sans-serif'
+    ].join(','),
+    h1: {
+      fontSize: '2.5rem',
+    },
+    h2: {
+      fontSize: '2rem',
+    },
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: 8,
+        },
+      },
+    },
+  },
 });
 
 export default theme;

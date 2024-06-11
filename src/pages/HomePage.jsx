@@ -53,10 +53,11 @@ function HomePage() {
           display: 'flex',
           flexDirection: { xs: 'column', md: 'row' },
           alignItems: 'center',
+          justifyContent: 'center',
           bgcolor: 'background.default',
           border: '1px solid',
           borderColor: 'divider',
-          borderRadius: 2,
+          borderRadius: 10,
           overflow: 'clip',
         }}
       >
