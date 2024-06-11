@@ -1,0 +1,142 @@
+.section-stories {
+  position: relative;
+  padding: 10rem 0;
+
+  @media (max-width: 991px) {
+    padding: 8rem 0;
+  }
+
+  @media (max-width: 767px) {
+    padding: 5rem 0;
+  }
+
+  @media (max-width: 576px) {
+    padding: 3rem 0;
+  }
+
+  .container {
+    .bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      opacity: 0.15;
+      overflow: hidden;
+
+      &-content {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .column {
+      display: flex;
+      justify-content: center;
+
+      @media (max-width: 768px) {
+        align-items: center;
+      }
+
+      .story {
+        width: 75%;
+        margin: auto;
+        box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 3px;
+        padding: 6rem;
+        padding-left: 9rem;
+        font-size: 1.6rem;
+        transform: skewX(-12deg);
+        transition: transform 0.3s;
+
+        @media (max-width: 768px) {
+          width: 80%;
+          padding: 3rem;
+          transform: none;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        @media (max-width: 576px) {
+          width: 100%;
+        }
+
+        &-figure {
+          width: 15rem;
+          height: 15rem;
+          float: left;
+          shape-outside: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+          transform: translateX(-3rem) skewX(12deg);
+          margin: 0 3rem 1rem 0;
+          position: relative;
+
+          @media (max-width: 768px) {
+            float: none;
+            shape-outside: none;
+            transform: none;
+            margin:0 0 3rem 0;
+          }
+
+          &-img {
+            height: 100%;
+            transform: translateX(-4rem) scale(1.4);
+            backface-visibility: hidden;
+            transition: all 0.5s;
+
+            @media (max-width: 768px) {
+              transform: translateX(0) scale(1.2);
+            }
+          }
+
+          &-caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 20%);
+            color: white;
+            text-transform: uppercase;
+            font-size: 1.7rem;
+            text-align: center;
+            opacity: 0;
+            transition: all 0.5s;
+            backface-visibility: hidden;
+
+            @media (max-width: 768px) {
+              font-size: 1.5rem;
+            }
+          }
+        }
+
+        &-text {
+          transform: skewX(12deg);
+
+          @media (max-width: 768px) {
+            transform: none;
+            text-align: center;
+          }
+
+          &-heading {
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+          }
+        }
+
+        &:hover .story-figure-caption {
+          opacity: 1;
+          transform: translate(-50%, -50%);
+        }
+
+        &:hover .story-figure-img {
+          transform: translateX(-4rem) scale(1);
+          filter: blur(3px) brightness(80%);
+        }
+      }
+    }
+  }
+}

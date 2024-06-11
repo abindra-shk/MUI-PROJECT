@@ -1,0 +1,125 @@
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all 0.2s;
+    position: relative;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  &-white {
+    background-color: #fff;
+    color: #777;
+
+    &::after {
+      background-color: #fff;
+    }
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+  }
+
+  &-animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+    position: sticky;
+    top: 0;
+  }
+}
+
+.heading {
+  text-align: center;
+  color: green;
+  font-weight: 700;
+  font-size: 3.5rem;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+
+  @media (max-width: 1200px) {
+    font-size: 3rem;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.row {
+  display: flex;
+}
+
+// .logo-box {
+//   position: fixed;
+//   top: 1.6rem;
+//   left: 4rem;
+//   z-index: 50;
+
+//   .logo {
+//     height: 35px;
+//   }
+
+//   @media (max-width: 767px) {
+//     position: absolute;
+//   }
+// }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10rem;
+
+  @media (max-width: 992px) {
+    padding: 0 8rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 5rem;
+  }
+
+  @media (max-width: 576px) {
+    padding: 0 3rem;
+  }
+}

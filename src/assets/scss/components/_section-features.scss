@@ -1,0 +1,94 @@
+.section-features {
+  padding: 10rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.8),
+      rgba(40, 180, 133, 0.8)
+    ),
+    url(../../assets/images/nat-4.jpg);
+  background-size: cover;
+  transform: skewY(-4deg);
+  margin-top: -5rem;
+
+  @media (max-width: 991px) {
+    margin-top: -3rem;
+    padding:15rem 0
+  }
+
+  @media (max-width: 767px) {
+    transform: none;
+    margin-top: 0;
+    padding:5rem 0;
+  }
+
+  @media (max-width: 576px) {
+    transform: none;
+    margin-top: 0;
+    padding:3rem 0
+  }
+
+  .container{
+    .row {
+      transform: skewY(4deg);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+
+      @media (max-width: 991px) {
+        margin-top: -7rem;
+      }
+    
+      @media (max-width: 767px) {
+        transform: none;
+        margin-top: 0;
+      }
+  
+      .card {
+        flex: 1 1 calc(25% - 2rem); 
+        max-width: calc(25% - 2rem); 
+        background-color: rgba(255, 255, 255, 0.8);
+        font-size: 1.5rem;
+        padding: 2.5rem;
+        text-align: center;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s;
+  
+        @media (max-width: 1199px) {
+          flex: 1 1 calc(33.333% - 2rem); 
+          max-width: calc(33.333% - 2rem);
+        }
+  
+        @media (max-width: 1023px) {
+          flex: 1 1 calc(50% - 2rem); 
+          max-width: calc(50% - 2rem);
+        }
+  
+        @media (max-width: 767px) {
+          flex: 1 1 100%;
+          max-width: 100%;
+        }
+  
+        @media (max-width: 640px) {
+          flex: 1 1 100%;
+          max-width: 100%;
+        }
+  
+        .card-icon {
+          font-size: 6rem;
+          margin-bottom: 0.5rem;
+          display: inline-block;
+          background-image: linear-gradient(to right, #7ed56f, #28b485);
+          background-clip: text;
+          color: transparent;
+        }
+  
+        &:hover {
+          transform: translateY(-1.5rem) scale(1.03);
+        }
+      }
+    }
+  }
+
+}

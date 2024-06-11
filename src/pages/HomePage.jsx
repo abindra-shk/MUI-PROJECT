@@ -1,21 +1,43 @@
-import { Container, Box } from '@mui/material';
-
+import {
+  Container,
+  Box,
+  Typography,
+  createTheme,
+  ThemeProvider,
+} from '@mui/material';
 // import About from '../components/sections/About';
 // import Features from '../components/sections/Features';
 // import Tours from '../components/sections/Tours';
 // import Stories from '../components/sections/Stories';
 // import Banner from '../components/sections/Banner';
-import SearchAppBar from '../layout/Header';
+// import SearchAppBar from '../layout/Header';
+import Header from '../layout/Header';
+
+const theme = createTheme();
+
+theme.typography.h3 = {
+  fontSize: '1.2rem',
+  '@media (min-width:600px)': {
+    fontSize: '1.5rem',
+  },
+  [theme.breakpoints.up('md')]: {
+    fontSize: '2rem',
+  },
+};
 
 function HomePage() {
   return (
     <Container maxWidth="xl" disableGutters="true">
-      <SearchAppBar />
+      <Header />
       <Box
         sx={{
+          display: 'flex',
+          height: '80vh',
           backgroundColor: 'secondary.light',
           color: 'black',
           padding: '16px',
+          alignItems: 'center',
+          justifyContent: 'center',
         }}
       >
         This is a styled box.
@@ -70,7 +92,7 @@ function HomePage() {
             maxWidth: { xs: 350, md: 250 },
           }}
           alt="The house from the offer."
-          src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&w=350&dpr=2"
+          src="../assets/images/logo-white.png"
         />
         <Box
           sx={{
@@ -120,6 +142,15 @@ function HomePage() {
           </Box>
         </Box>
       </Box>
+      <Box component="section" sx={{ p: 2, border: '1px dashed grey' }}>
+        This Box renders as an HTML section element.
+      </Box>
+      {/* <Typography variant="h1" component="h2">
+        h1. Heading
+      </Typography> */}
+      <ThemeProvider theme={theme}>
+        <Typography variant="h3">Responsive h3</Typography>
+      </ThemeProvider>
       {/* <Box mt={4}>
         <Banner />
       </Box>
