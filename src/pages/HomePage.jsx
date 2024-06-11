@@ -4,6 +4,9 @@ import {
   Typography,
   createTheme,
   ThemeProvider,
+  Checkbox,
+  FormControlLabel,
+  FormGroup,
 } from '@mui/material';
 // import About from '../components/sections/About';
 // import Features from '../components/sections/Features';
@@ -12,6 +15,7 @@ import {
 // import Banner from '../components/sections/Banner';
 // import SearchAppBar from '../layout/Header';
 import Header from '../layout/Header';
+// import { useState } from 'react';
 
 const theme = createTheme();
 
@@ -26,6 +30,12 @@ theme.typography.h3 = {
 };
 
 function HomePage() {
+  // const [checked, setChecked] = useState(false);
+
+  // const handleCheckboxChange = (event) => {
+  //   setChecked(event.target.checked);
+  // };
+
   return (
     <Container maxWidth="xl" disableGutters="true">
       <Header />
@@ -42,7 +52,29 @@ function HomePage() {
       >
         This is a styled box.
       </Box>
-      <Box
+      <div>
+        <FormGroup>
+          <FormControlLabel
+            control={<Checkbox className="menu-toggle" />}
+            label="Label"
+          />
+        </FormGroup>
+        <Box
+          height={200}
+          width={200}
+          my={4}
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          gap={4}
+          p={2}
+          className="test-box"
+        >
+          This Box uses MUI System props for quick customization.
+        </Box>
+      </div>
+
+      {/* <Box
         sx={{
           bgcolor: 'background.paper',
           boxShadow: 1,
@@ -69,7 +101,7 @@ function HomePage() {
         <Box sx={{ color: 'text.secondary', display: 'inline', fontSize: 12 }}>
           vs. last week
         </Box>
-      </Box>
+      </Box> */}
       <Box
         sx={{
           display: 'flex',
