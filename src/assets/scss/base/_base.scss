@@ -4,16 +4,22 @@
   box-sizing: border-box;
 }
 
+#root {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; // 62.5% of 16px = 10px
 
   @media (max-width: 1200px) {
-    font-size: 56.25%;
+    font-size: 56.25%; // 56.25% of 16px = 9px
   }
 
   @media (max-width: 900px) {
-    font-size: 50%;
+    font-size: 50%; // 50% of 16px = 8px
   }
 }
 
@@ -22,8 +28,8 @@ body {
   color: #777;
 }
 
-.wrapper {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
+// .wrapper {
+//   position: relative;
+//   overflow: hidden;
+//   width: 100%;
+// }

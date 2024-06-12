@@ -9,15 +9,15 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import logo from '../assets/images/logo-white.png';
+import logo from '/images/logo-white.png';
 import { useState } from 'react';
 
 const Header = () => {
-  const [isMenuOpen,setMenuOpen] = useState(false);
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
-  }
+  };
 
   return (
     <Box component="header" className="header">
@@ -47,7 +47,7 @@ const Header = () => {
               close
             </span>
           </label> */}
-           <FormControlLabel
+          <FormControlLabel
             control={<Checkbox className="menu-toggle" id="menu-toggle" />}
             label={
               <IconButton
@@ -55,13 +55,17 @@ const Header = () => {
                 htmlFor="menu-toggle"
                 className="menu-icon"
               >
-                <MenuIcon className={isMenuOpen ? 'menu-icon-close' : 'menu-icon-open'} />
-                <CloseIcon className={isMenuOpen ? 'menu-icon-open' : 'menu-icon-close'} />
+                <MenuIcon
+                  className={isMenuOpen ? 'menu-icon-close' : 'menu-icon-open'}
+                />
+                <CloseIcon
+                  className={isMenuOpen ? 'menu-icon-open' : 'menu-icon-close'}
+                />
               </IconButton>
             }
             onChange={toggleMenu}
           />
-          <Box component="ul" className='nav-items'>
+          <Box component="ul" className="nav-items">
             <Box component="li" className="nav-item">
               <Link href="#about" className="nav-link">
                 About
@@ -215,8 +219,21 @@ const Header = () => {
               </Link>
             </Box>
           </Box>
-          <Box className={isMenuOpen ? 'navigation-background navigation-background-open' : 'navigation-background'}></Box>
-          <Box component="ul" className={isMenuOpen ? 'nav-items-mobile nav-items-mobile-open' : 'nav-items-mobile-closed'}>
+          <Box
+            className={
+              isMenuOpen
+                ? 'navigation-background navigation-background-open'
+                : 'navigation-background'
+            }
+          ></Box>
+          <Box
+            component="ul"
+            className={
+              isMenuOpen
+                ? 'nav-items-mobile nav-items-mobile-open'
+                : 'nav-items-mobile-closed'
+            }
+          >
             <Box component="li" className="nav-item">
               <Link href="#about" className="nav-link">
                 About

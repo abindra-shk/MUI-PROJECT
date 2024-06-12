@@ -13,7 +13,7 @@ const Banner = () => {
               is where life happens
             </Typography>
           </Typography>
-          <Button href="#" className="btn btn-white btn-animated">
+          <Button href="#">
             Discover our tours
           </Button>
         </Box>
