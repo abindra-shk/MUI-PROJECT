@@ -15,6 +15,7 @@ import {
 // import Banner from '../components/sections/Banner';
 // import SearchAppBar from '../layout/Header';
 import Header from '../layout/Header';
+import Banner from '../components/sections/Banner';
 // import { useState } from 'react';
 
 const theme = createTheme();
@@ -39,6 +40,7 @@ function HomePage() {
   return (
     <Container maxWidth="xl" disableGutters="true">
       <Header />
+      <Banner/>
       <Box
         sx={{
           display: 'flex',
