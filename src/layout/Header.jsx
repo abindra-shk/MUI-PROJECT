@@ -1,6 +1,5 @@
 import {
   Box,
-  Container,
   Link,
   Checkbox,
   FormControlLabel,
@@ -21,7 +20,6 @@ const Header = () => {
 
   return (
     <Box component="header" className="header">
-      <Container maxWidth="xl" disableGutters>
         <Box className="nav-bar">
           <Box className="logo-box">
             <Box
@@ -256,7 +254,6 @@ const Header = () => {
             </Box>
           </Box>
         </Box>
-      </Container>
     </Box>
   );
 };
