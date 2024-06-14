@@ -10,9 +10,7 @@ import {
   List,
   ListItem,
 } from '@mui/material';
-
-import Swiper from 'swiper/bundle'; // Import Swiper bundle
-
+import Swiper from 'swiper/bundle';
 const tours = [
   {
     id: 1,
@@ -81,8 +79,6 @@ const Tours = () => {
     const swiperEl = new Swiper('.swiper2', {
       slidesPerView: 1,
       spaceBetween: 10,
-      // loop: true,
-
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -96,12 +92,10 @@ const Tours = () => {
           slidesPerView: 1,
           spaceBetween: 10,
         },
-
         '@0.60': {
           slidesPerView: 2,
           spaceBetween: 10,
         },
-
         '@0.75': {
           slidesPerView: 2,
           spaceBetween: 20,
@@ -113,14 +107,12 @@ const Tours = () => {
       },
     });
 
-    // Optionally, initialize Swiper if it's not auto-initialized
     swiperEl.init();
 
-    // Clean up Swiper instance on component unmount
     return () => {
       swiperEl.destroy();
     };
-  }, []); // Empty dependency array ensures this runs only once after initial render
+  }, []);
 
   return (
     <Box component="section" id="tours" className="section-tours">
@@ -131,7 +123,7 @@ const Tours = () => {
             <div className="swiper-wrapper">
               {tours.map((tour) => (
                 <div key={tour.id} className="swiper-slide">
-                  <Card className="tour-card">
+                  <Card className="tour-card" elevation={0}>
                     <Box className={`tour-card-side tour-card-side-front`}>
                       <Box
                         className={`tour-card-picture ${tour.pictureClass}`}

@@ -11,7 +11,7 @@ const Features = () => {
           <Grid item xs={12} sm={6} md={4} lg={3} className="card">
             {/* <LanguageOutlinedIcon className="card-icon" /> */}
             <Box component="i" className="card-icon icon-basic-world"></Box>
-            <Typography variant="h3" className="card-heading">
+            <Typography variant="h3" component="div" className="card-heading">
               Explore the world
             </Typography>
             <Typography className="card-text">

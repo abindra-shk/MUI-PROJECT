@@ -7,19 +7,12 @@ import {
   FormControlLabel,
   FormGroup,
 } from '@mui/material';
-// import About from '../components/sections/About';
-// import Features from '../components/sections/Features';
-// import Tours from '../components/sections/Tours';
-// import Stories from '../components/sections/Stories';
-// import Banner from '../components/sections/Banner';
-// import SearchAppBar from '../layout/Header';
 import Header from '../layout/Header';
 import Banner from '../components/sections/Banner';
 import About from '../components/sections/About';
 import Features from '../components/sections/Features';
-import LanguageIcon from '@mui/icons-material/Language';
 import Tours from '../components/sections/Tours';
-// import { useState } from 'react';
+import Stories from '../components/sections/Stories';
 
 const theme = createTheme();
 
@@ -41,7 +34,7 @@ function HomePage() {
       <About />
       <Features />
       <Tours />
-      <LanguageIcon />
+      <Stories />
       <Box
         sx={{
           display: 'flex',

@@ -33,7 +33,7 @@ const theme = createTheme({
       fontSize: '1.6rem',
       fontWeight: 400,
       lineHeight: 1.7,
-      marginBottom:'3rem'
+      marginBottom: '3rem',
     },
     h4: {
       textAlign: 'center',
@@ -137,8 +137,8 @@ const theme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: {
-          boxShadow: 'none',
-          backgroundColor: '#f7f7f7'
+          color: 'inherit',
+          backgroundColor: '#f7f7f7',
         },
       },
     },
