@@ -134,6 +134,14 @@ const theme = createTheme({
         },
       },
     },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          boxShadow: 'none',
+          backgroundColor: '#f7f7f7'
+        },
+      },
+    },
   },
 });
 

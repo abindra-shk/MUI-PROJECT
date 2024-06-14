@@ -6,27 +6,30 @@ import {
   Checkbox,
   FormControlLabel,
   FormGroup,
-} from "@mui/material";
+} from '@mui/material';
 // import About from '../components/sections/About';
 // import Features from '../components/sections/Features';
 // import Tours from '../components/sections/Tours';
 // import Stories from '../components/sections/Stories';
 // import Banner from '../components/sections/Banner';
 // import SearchAppBar from '../layout/Header';
-import Header from "../layout/Header";
-import Banner from "../components/sections/Banner";
-import About from "../components/sections/About";
+import Header from '../layout/Header';
+import Banner from '../components/sections/Banner';
+import About from '../components/sections/About';
+import Features from '../components/sections/Features';
+import LanguageIcon from '@mui/icons-material/Language';
+import Tours from '../components/sections/Tours';
 // import { useState } from 'react';
 
 const theme = createTheme();
 
 theme.typography.h3 = {
-  fontSize: "1.2rem",
-  "@media (min-width:600px)": {
-    fontSize: "1.5rem",
+  fontSize: '1.2rem',
+  '@media (min-width:600px)': {
+    fontSize: '1.5rem',
   },
-  [theme.breakpoints.up("md")]: {
-    fontSize: "2rem",
+  [theme.breakpoints.up('md')]: {
+    fontSize: '2rem',
   },
 };
 
@@ -36,15 +39,18 @@ function HomePage() {
       <Header />
       <Banner />
       <About />
+      <Features />
+      <Tours />
+      <LanguageIcon />
       <Box
         sx={{
-          display: "flex",
-          height: "80vh",
-          backgroundColor: "secondary.light",
-          color: "black",
-          padding: "16px",
-          alignItems: "center",
-          justifyContent: "center",
+          display: 'flex',
+          height: '80vh',
+          backgroundColor: 'secondary.light',
+          color: 'black',
+          padding: '16px',
+          alignItems: 'center',
+          justifyContent: 'center',
         }}
       >
         This is a styled box.
@@ -73,15 +79,15 @@ function HomePage() {
 
       <Box
         sx={{
-          display: "flex",
-          flexDirection: { xs: "column", md: "row" },
-          alignItems: "center",
-          justifyContent: "center",
-          bgcolor: "background.default",
-          border: "1px solid",
-          borderColor: "divider",
+          display: 'flex',
+          flexDirection: { xs: 'column', md: 'row' },
+          alignItems: 'center',
+          justifyContent: 'center',
+          bgcolor: 'background.default',
+          border: '1px solid',
+          borderColor: 'divider',
           borderRadius: 10,
-          overflow: "clip",
+          overflow: 'clip',
         }}
       >
         <Box
@@ -99,24 +105,24 @@ function HomePage() {
           sx={{
             p: 3,
             minWidth: { md: 350 },
-            display: "flex",
-            flexDirection: "column",
-            alignItems: { xs: "center", md: "flex-start" },
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: { xs: 'center', md: 'flex-start' },
             gap: 0.5,
           }}
         >
           <Box
             component="span"
-            sx={{ fontSize: "0.875rem", color: "text.secondary" }}
+            sx={{ fontSize: '0.875rem', color: 'text.secondary' }}
           >
             123 Main St, Phoenix AZ
           </Box>
           <Box
             component="span"
             sx={{
-              color: "primary.main",
-              fontSize: "1.5rem",
-              fontWeight: "bold",
+              color: 'primary.main',
+              fontSize: '1.5rem',
+              fontWeight: 'bold',
             }}
           >
             $280,000 — $310,000
@@ -125,25 +131,25 @@ function HomePage() {
             sx={{
               py: 0.5,
               px: 1,
-              backgroundColor: "rgba(46, 125, 50, 0.1)",
+              backgroundColor: 'rgba(46, 125, 50, 0.1)',
               borderRadius: 10,
-              display: "flex",
-              alignItems: "center",
+              display: 'flex',
+              alignItems: 'center',
               gap: 0.5,
-              border: "1px solid",
-              borderColor: "rgba(46, 125, 50, 0.1)",
-              fontSize: "0.7rem",
-              fontWeight: "bold",
-              letterSpacing: ".05rem",
-              textTransform: "uppercase",
-              color: "success.main",
+              border: '1px solid',
+              borderColor: 'rgba(46, 125, 50, 0.1)',
+              fontSize: '0.7rem',
+              fontWeight: 'bold',
+              letterSpacing: '.05rem',
+              textTransform: 'uppercase',
+              color: 'success.main',
             }}
           >
             Confidence score: 85%
           </Box>
         </Box>
       </Box>
-      <Box component="section" sx={{ p: 2, border: "1px dashed grey" }}>
+      <Box component="section" sx={{ p: 2, border: '1px dashed grey' }}>
         This Box renders as an HTML section element.
       </Box>
       {/* <Typography variant="h1" component="h2">

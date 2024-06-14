@@ -1,58 +1,183 @@
+import { useEffect } from 'react';
 import {
   Box,
+  Container,
   Typography,
   Card,
   CardContent,
-  CardMedia,
-  Grid,
+  CardActions,
+  Button,
+  List,
+  ListItem,
 } from '@mui/material';
 
-function Tours() {
-  const tours = [
-    {
-      title: 'Tour 1',
-      description: 'Description of Tour 1',
-      image: '/path/to/image1.jpg',
-    },
-    {
-      title: 'Tour 2',
-      description: 'Description of Tour 2',
-      image: '/path/to/image2.jpg',
-    },
-    {
-      title: 'Tour 3',
-      description: 'Description of Tour 3',
-      image: '/path/to/image3.jpg',
-    },
-  ];
+import Swiper from 'swiper/bundle'; // Import Swiper bundle
+
+const tours = [
+  {
+    id: 1,
+    title: 'The Sea Explorer',
+    details: [
+      '3 day tours',
+      'Up to 30 people',
+      '2 tour guides',
+      'Sleep in cozy hotels',
+      'Difficulty: easy',
+    ],
+    price: '$297',
+    pictureClass: 'tour-card-picture-1',
+    backClass: 'tour-card-side-back-1',
+    headingSpanClass: 'tour-card-heading-span-1',
+  },
+  {
+    id: 2,
+    title: 'The Forest Hiker',
+    details: [
+      '7 day tours',
+      'Up to 40 people',
+      '6 tour guides',
+      'Sleep in provided tents',
+      'Difficulty: medium',
+    ],
+    price: '$497',
+    pictureClass: 'tour-card-picture-2',
+    backClass: 'tour-card-side-back-2',
+    headingSpanClass: 'tour-card-heading-span-2',
+  },
+  {
+    id: 3,
+    title: 'The Snow Adventurer',
+    details: [
+      '5 day tours',
+      'Up to 15 people',
+      '3 tour guides',
+      'Sleep in provided tents',
+      'Difficulty: hard',
+    ],
+    price: '$897',
+    pictureClass: 'tour-card-picture-3',
+    backClass: 'tour-card-side-back-3',
+    headingSpanClass: 'tour-card-heading-span-3',
+  },
+  {
+    id: 4,
+    title: 'The Snow Adventurer',
+    details: [
+      '5 day tours',
+      'Up to 15 people',
+      '3 tour guides',
+      'Sleep in provided tents',
+      'Difficulty: hard',
+    ],
+    price: '$897',
+    pictureClass: 'tour-card-picture-3',
+    backClass: 'tour-card-side-back-3',
+    headingSpanClass: 'tour-card-heading-span-3',
+  },
+];
+
+const Tours = () => {
+  useEffect(() => {
+    const swiperEl = new Swiper('.swiper2', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      // loop: true,
+
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        '@0.00': {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+
+        '@0.60': {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+
+        '@0.75': {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        '@1.50': {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+      },
+    });
+
+    // Optionally, initialize Swiper if it's not auto-initialized
+    swiperEl.init();
+
+    // Clean up Swiper instance on component unmount
+    return () => {
+      swiperEl.destroy();
+    };
+  }, []); // Empty dependency array ensures this runs only once after initial render
 
   return (
-    <Box>
-      <Typography variant="h4" align="center" gutterBottom>
-        Tours
-      </Typography>
-      <Grid container spacing={4}>
-        {tours.map((tour, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
-            <Card>
-              <CardMedia
-                component="img"
-                height="140"
-                image={tour.image}
-                alt={tour.title}
-              />
-              <CardContent>
-                <Typography variant="h5">{tour.title}</Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {tour.description}
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
+    <Box component="section" id="tours" className="section-tours">
+      <Container>
+        <Typography variant="h4">MOST POPULAR TOURS</Typography>
+        <Box className="feature-swiper">
+          <div className="swiper-container swiper2">
+            <div className="swiper-wrapper">
+              {tours.map((tour) => (
+                <div key={tour.id} className="swiper-slide">
+                  <Card className="tour-card">
+                    <Box className={`tour-card-side tour-card-side-front`}>
+                      <Box
+                        className={`tour-card-picture ${tour.pictureClass}`}
+                      ></Box>
+                      <Typography variant="h4" className="tour-card-heading">
+                        <span
+                          className={`tour-card-heading-span ${tour.headingSpanClass}`}
+                        >
+                          {tour.title}
+                        </span>
+                      </Typography>
+                      <CardContent className="tour-card-details">
+                        <List>
+                          {tour.details.map((detail, index) => (
+                            <ListItem key={index}>{detail}</ListItem>
+                          ))}
+                        </List>
+                      </CardContent>
+                    </Box>
+                    <Box
+                      className={`tour-card-side tour-card-side-back ${tour.backClass}`}
+                    >
+                      <Box className="tour-card-cta">
+                        <Box className="tour-card-price-box">
+                          <Typography className="tour-card-price-only">
+                            Only
+                          </Typography>
+                          <Typography className="tour-card-price-value">
+                            {tour.price}
+                          </Typography>
+                        </Box>
+                        <CardActions sx={{ justifyContent: 'center' }}>
+                          <Button>Book now!</Button>
+                        </CardActions>
+                      </Box>
+                    </Box>
+                  </Card>
+                </div>
+              ))}
+            </div>
+            <div className="swiper-pagination"></div>
+          </div>
+        </Box>
+      </Container>
     </Box>
   );
-}
+};
 
 export default Tours;
