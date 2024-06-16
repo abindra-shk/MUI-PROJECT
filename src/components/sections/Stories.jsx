@@ -11,7 +11,7 @@ import {
 const Stories = () => {
   return (
     <Box component="section" id="stories" className="section-stories">
-      <Container className="container">
+      <Container className="container" disableGutters='true'>
         <Box className="bg-video">
           <video className="bg-video-content" autoPlay muted loop>
             <source src="./videos/video.mp4" type="video/mp4" />
@@ -23,11 +23,11 @@ const Stories = () => {
           We make people genuinely happy
         </Typography>
         <Box className="column">
-          <Card className="story">
+          <div className="story">
             <figure className="story-figure">
-              <CardMedia
-                component="img"
-                image="/images/nat-8.jpg"
+              <img
+              
+                src="/images/nat-8.jpg"
                 alt="Person on a tour"
                 className="story-figure-img"
               />
@@ -51,7 +51,7 @@ const Stories = () => {
                 consequatur ducimus quam nisi exercitationem omnis earum.
               </Typography>
             </CardContent>
-          </Card>
+          </div>
         </Box>
       </Container>
     </Box>
