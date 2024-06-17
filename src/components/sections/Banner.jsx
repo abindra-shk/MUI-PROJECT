@@ -3,7 +3,7 @@ import { Box, Container, Typography, Button } from "@mui/material";
 const Banner = () => {
   return (
     <Box className="section-banner">
-      <Container className="container">
+      <Container >
         <Box className="text-box">
           <Typography variant="h1" className="heading-primary">
             <Typography component="span" className="heading-primary-main">
@@ -13,7 +13,7 @@ const Banner = () => {
               is where life happens
             </Typography>
           </Typography>
-          <Button href="#">
+          <Button variant="contained" href="#">
             Discover our tours
           </Button>
         </Box>

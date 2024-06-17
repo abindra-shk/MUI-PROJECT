@@ -46,13 +46,13 @@ const theme = createTheme({
       transition: 'all 0.2s',
       marginBottom: '5rem',
       textTransform: 'uppercase',
-      '@media (max-width: 1200px)': {
+      '@media (max-width: 1199px)': {
         fontSize: '3rem',
       },
       '@media (max-width: 991px)': {
         fontSize: '2.5rem',
       },
-      '@media (max-width: 768px)': {
+      '@media (max-width: 767px)': {
         fontSize: '2.5rem',
         marginBottom: '3rem',
       },
@@ -83,7 +83,7 @@ const theme = createTheme({
     },
     MuiButton: {
       styleOverrides: {
-        root: {
+        containedPrimary: {
           textTransform: 'uppercase',
           textDecoration: 'none',
           padding: '15px 40px',
@@ -96,6 +96,7 @@ const theme = createTheme({
           fontWeight: 400,
           lineHeight: 1.7,
           color: '#777',
+          backgroundColor: '#fff',
           '&:hover': {
             transform: 'translateY(-3px)',
             boxShadow: '0 10px 20px rgba(0, 0, 0, 0.2)',
@@ -125,13 +126,6 @@ const theme = createTheme({
           animation: 'moveInBottom 0.5s ease-out 0.75s',
           animationFillMode: 'backwards',
         },
-        contained: {
-          backgroundColor: '#fff',
-          color: '#777',
-          '&:hover': {
-            backgroundColor: '#fff',
-          },
-        },
       },
     },
     MuiCard: {
@@ -139,6 +133,14 @@ const theme = createTheme({
         root: {
           color: 'inherit',
           backgroundColor: '#f7f7f7',
+
+        '&.story': {
+
+        },
+
+        '& .story-figure': {
+          
+        }
         },
       },
     },

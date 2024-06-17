@@ -5,7 +5,15 @@ import {
   Card,
   CardContent,
   CardMedia,
+  styled,
 } from '@mui/material';
+
+const CardContentNoPadding = styled(CardContent)(`
+  padding: 0;
+  &:last-child {
+    padding-bottom: 0;
+  }
+`);
 
 const Stories = () => {
   return (
@@ -18,12 +26,10 @@ const Stories = () => {
             Your browser is not supported!
           </video>
         </Box>
-        <Typography variant="h4" className="heading">
-          We make people genuinely happy
-        </Typography>
+        <Typography variant="h4">We make people genuinely happy</Typography>
         <Box className="column">
           <Card className="story">
-            <Box component="div" className="story-figure">
+            <Box className="story-figure">
               <CardMedia
                 component="img"
                 src="/images/nat-8.jpg"
@@ -34,18 +40,18 @@ const Stories = () => {
                 Mary Smith
               </Typography>
             </Box>
-            <CardContent className="story-text">
-              <Typography variant="h5">
+            <CardContentNoPadding className="story-text">
+              <Typography variant="h6">
                 I had the best week ever with my family
               </Typography>
-              <Typography variant="body1">
+              <Typography variant="body1" gutterBottom="false">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Aperiam, ipsum sapiente aspernatur libero repellat quis
                 consequatur ducimus quam nisi exercitationem omnis earum qui.
                 Aperiam, ipsum sapiente aspernatur libero repellat quis
                 consequatur ducimus quam nisi exercitationem.
               </Typography>
-            </CardContent>
+            </CardContentNoPadding>
           </Card>
         </Box>
       </Container>

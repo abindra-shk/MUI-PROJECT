@@ -11,10 +11,10 @@ const Features = () => {
           <Grid item xs={12} sm={6} md={4} lg={3} className="card">
             {/* <LanguageOutlinedIcon className="card-icon" /> */}
             <Box component="i" className="card-icon icon-basic-world"></Box>
-            <Typography variant="h3" component="div" className="card-heading">
+            <Typography variant="h6" component="h6">
               Explore the world
             </Typography>
-            <Typography className="card-text">
+            <Typography variant="body1">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
               ipsum sapiente aspernatur.
             </Typography>
@@ -22,10 +22,10 @@ const Features = () => {
           <Grid item xs={12} sm={6} md={4} lg={3} className="card">
             {/* <ExploreOutlinedIcon className="card-icon" /> */}
             <Box component="i" className="card-icon icon-basic-compass"></Box>
-            <Typography variant="h3" className="card-heading">
+            <Typography variant="h6" component="h6">
               Meet nature
             </Typography>
-            <Typography className="card-text">
+            <Typography variant="body1">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
               ipsum sapiente aspernatur.
             </Typography>
@@ -33,20 +33,20 @@ const Features = () => {
           <Grid item xs={12} sm={6} md={4} lg={3} className="card">
             {/* <MapOutlinedIcon className="card-icon" /> */}
             <Box component="i" className="card-icon icon-basic-map"></Box>
-            <Typography variant="h3" className="card-heading">
+            <Typography variant="h6" component="h6">
               Find your way
             </Typography>
-            <Typography className="card-text">
+            <Typography variant="body1">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
               ipsum sapiente aspernatur.
             </Typography>
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={3} className="card">
             <Box component="i" className="card-icon icon-basic-heart"></Box>
-            <Typography variant="h3" className="card-heading">
+            <Typography variant="h6" component="h6">
               Live a healthier life
             </Typography>
-            <Typography className="card-text">
+            <Typography variant="body1">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
               ipsum sapiente aspernatur.
             </Typography>

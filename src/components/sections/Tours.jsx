@@ -156,7 +156,7 @@ const Tours = () => {
                           </Typography>
                         </Box>
                         <CardActions sx={{ justifyContent: 'center' }}>
-                          <Button>Book now!</Button>
+                          <Button variant='contained'>Book now!</Button>
                         </CardActions>
                       </Box>
                     </Box>

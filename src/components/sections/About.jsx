@@ -9,7 +9,7 @@ const About = () => {
   return (
     <Box className="section-about">
       <Container>
-        <Typography variant="h4">
+        <Typography variant="h4" >
           EXCITING TOURS FOR ADVENTUROUS PEOPLE
         </Typography>
         <Stack
@@ -18,15 +18,15 @@ const About = () => {
           className="row"
         >
           <Box className="text-area">
-            <Typography variant="h6">
+            <Typography variant="h6" gutterBottom="true">
               YOU ARE GOING TO FALL IN LOVE WITH NATURE
             </Typography>
-            <Typography variant="body1">
+            <Typography variant="body1" gutterBottom="true">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
               ipsum sapiente aspernatur libero repellat quis consequatur ducimus
               quam nisi exercitationem omnis earum qui.
             </Typography>
-            <Typography variant="h6">
+            <Typography variant="h6" gutterBottom="true">
               Live adventures like you never have before
             </Typography>
             <Typography variant="body1">
@@ -46,6 +46,8 @@ const About = () => {
               centeredSlides="true"
               pagination-dynamic-bullets="true"
               class="swiper1"
+              autoplay-delay="2500"
+              autoplay-disable-on-interaction="false"
             >
               <swiper-slide class="swiper-slide-custom">
                 <img
