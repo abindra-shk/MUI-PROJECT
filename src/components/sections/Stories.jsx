@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Box,
   Container,
@@ -5,13 +6,12 @@ import {
   Card,
   CardContent,
   CardMedia,
-} from '@mui/material';
-// Import your existing SCSS
+} from "@mui/material";
 
 const Stories = () => {
   return (
     <Box component="section" id="stories" className="section-stories">
-      <Container className="container" disableGutters='true'>
+      <Container className="container" disableGutters>
         <Box className="bg-video">
           <video className="bg-video-content" autoPlay muted loop>
             <source src="./videos/video.mp4" type="video/mp4" />
@@ -23,18 +23,18 @@ const Stories = () => {
           We make people genuinely happy
         </Typography>
         <Box className="column">
-          <div className="story">
-            <figure className="story-figure">
-              <img
-              
+          <Card className="story">
+            <Box component="div" className="story-figure">
+              <CardMedia
+                component="img"
                 src="/images/nat-8.jpg"
                 alt="Person on a tour"
                 className="story-figure-img"
               />
-              <figcaption className="story-figure-caption">
+              <Typography className="story-figure-caption">
                 Mary Smith
-              </figcaption>
-            </figure>
+              </Typography>
+            </Box>
             <CardContent className="story-text">
               <Typography
                 variant="h5"
@@ -51,7 +51,7 @@ const Stories = () => {
                 consequatur ducimus quam nisi exercitationem omnis earum.
               </Typography>
             </CardContent>
-          </div>
+          </Card>
         </Box>
       </Container>
     </Box>
