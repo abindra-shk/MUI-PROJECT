@@ -9,11 +9,6 @@
 @import './components/section-features';
 @import './components/section-stories';
 @import './components/section-tours';
-@import './components/section-swiper';
 
 @import './layout/footer';
 @import './layout/header';
-
-.menu-toggle:checked + label .test-box {
-  background-color: red;
-}

@@ -85,7 +85,7 @@
 
           &-img {
             height: 100%;
-            transform: translateX(-4rem) scale(1.4);
+            transform: scale(1.4);
             backface-visibility: hidden;
             transition: all 0.5s;
 
@@ -134,7 +134,7 @@
         }
 
         &:hover .story-figure-img {
-          transform: translateX(-4rem) scale(1);
+          transform: scale(1);
           filter: blur(3px) brightness(80%);
         }
       }

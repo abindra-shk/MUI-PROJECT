@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Box,
   Container,
@@ -6,7 +5,7 @@ import {
   Card,
   CardContent,
   CardMedia,
-} from "@mui/material";
+} from '@mui/material';
 
 const Stories = () => {
   return (
@@ -36,19 +35,15 @@ const Stories = () => {
               </Typography>
             </Box>
             <CardContent className="story-text">
-              <Typography
-                variant="h5"
-                component="h3"
-                className="story-text-heading"
-              >
+              <Typography variant="h5">
                 I had the best week ever with my family
               </Typography>
-              <Typography variant="body1" className="story-text-description">
+              <Typography variant="body1">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Aperiam, ipsum sapiente aspernatur libero repellat quis
                 consequatur ducimus quam nisi exercitationem omnis earum qui.
                 Aperiam, ipsum sapiente aspernatur libero repellat quis
-                consequatur ducimus quam nisi exercitationem omnis earum.
+                consequatur ducimus quam nisi exercitationem.
               </Typography>
             </CardContent>
           </Card>
